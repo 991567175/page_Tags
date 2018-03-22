@@ -1,0 +1,392 @@
+html,body{
+    background: none;
+}
+.wd-pagination{
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.wd-pagination ul{
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    text-align: left;
+}
+.wd-pagination ul li{
+    display:inline;
+}
+.wd-pagination ul li a{
+    position:relative ;
+    display:inline-block;
+    padding: 4px 12px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle !important;
+    background-color: #d9d9d9;
+    border: 1px transparent solid;
+    color: #222222;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    letter-spacing: normal;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.wd-pagination ul li a:hover{
+    background-color: #4390df;
+    color: #ffffff;
+    text-decoration: none;
+}
+.wd-pagination ul li.active a{
+    background-color: #4390df;
+    color: #ffffff;
+    text-decoration: none;
+}
+.wd-pagination ul li.disabled a{
+    background-color: #f2f2f2;
+    color: #1e1e1e;
+    cursor: not-allowed;
+}
+.wd-pagination ul li.spaces a,.wd-pagination ul li.spaces a:hover{
+    background-color:transparent;
+    color: #222222;
+}
+.wd-pagination ul li.first a{
+
+}
+.wd-pagination ul li.last a{
+
+}
+.wd-pagination ul li.prev a{
+
+}
+.wd-pagination ul li.last a{
+
+}
+.wd-pagination-center ul{
+    text-align: center;
+}
+.wd-pagination-right ul{
+    text-align:right;
+}
+.wd-pagination-sm ul li a{
+    padding: 0px 8px;
+    font-size: 12px;
+}
+.wd-pagination-lg ul li a{
+    padding: 8px 16px;
+}
+.wd-pagination ul li a i{
+    vertical-align: middle;
+}
+/***分页样式 end***/
+/*tab 样式 start*/
+.wd-tab-control{
+
+}
+.wd-tab-nav{
+    position: relative;
+    overflow:hidden;
+    zoom: 1;
+    border-bottom: 1px solid #1ba1e2;
+}
+.wd-tab-nav li{
+    position: relative;
+    float: left;
+    display: inline;
+    margin-right: 5px;
+}
+.wd-tab-nav li a{
+    display: block;
+    padding: 6px 20px;
+    line-height: 20px;
+    background: #f1f1f1;
+    color: #333;
+}
+.wd-tab-nav li a:hover, .wd-tab-nav li.active a{
+    position: relative;
+    display:block;
+    color: #fff;
+    background: #1ba1e2;
+    text-decoration: none;
+}
+.wd-tab-nav li .close{
+    position: absolute;
+    font-size: 11px;
+    top:5px;
+    right: 5px;
+}
+.wd-tab-nav li.active .close{
+    color: #fff;
+}
+.wd-tab-content{
+
+}
+.wd-tab-content .wd-tab-pane{
+    display: none;
+}
+.wd-tab-content .wd-tab-pane.active{
+    display: block;
+}
+/*tab 样式 end*/
+
+
+
+.main-content{
+    margin-top: 15px;
+    background: #fff;
+    overflow: hidden;
+    padding-right: 15px;
+   /* padding:15px;*/
+}
+.main-content .content{
+    padding:15px;
+    overflow: no;
+    height: 100%;
+}
+.title-page{
+    border-top:1px solid #509ec9;
+    background:#f7f7f7 ;
+    color: #333333;
+    font-size: 18px;
+    height: 35px;
+    line-height: 35px;
+    font-family: "Microsoft Yahei", "宋体", Helvetica, Arial, Verdana, sans-serif;
+    padding-left: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.search-box{
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.search-box input{
+    float: left;
+    width: 220px;
+    height: 20px;
+    line-height: 20px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+}
+.search-box input:focus{
+    outline: 0;
+    outline: none;
+}
+.search-box .sure-btn{
+    margin-left: 10px;
+    float: left;
+    display: inline;
+    height: 30px;
+    line-height: 30px;
+    background: #3b88ed;
+    padding:0 15px;
+    color: #fff;
+}
+.search-box .sure-btn:hover{
+    background: #2d7ce3;
+    text-decoration: none;
+}
+.chart-box{
+    width: 85%;
+    background: #f7fbfb;
+    border: 1px solid #509ec9;
+    min-height: 280px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 1px #fff;
+    overflow: hidden;
+}
+
+.table-search{
+    margin-top: 20px;
+}
+.table-search th,.table-search td{
+    height: 28px;
+    line-height: 28px;
+
+}
+.table-search td{
+    padding-left: 5px;
+    padding-right: 15px;
+
+}
+.input-style{
+    height: 30px;
+    line-height: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    width: 170px;
+    background: #fff;
+}
+.input-style:focus,.select-style:focus{
+     outline: 0;
+     outline: none;
+ }
+.select-style{
+    height: 29px;
+    line-height: 29px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    width: 175px;
+    background: #fff;
+}
+
+.table-data{
+    width: 100%;
+    margin-top: 3px;
+}
+.table-data th{
+    height: 35px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: #E3EDF2;
+    font-weight: bold;
+}
+
+.table-data td{
+    border: 1px solid #ccc;
+    height: 35px;
+    text-align: center;
+}
+.table-data tr.even td{
+    background: #f7f7f7;
+}
+.table-data tr:hover td{
+    background: #ECF4F9;
+}
+.pagination-box{
+    height: 30px;
+    margin: 15px 0;
+}
+.pagination-box .pagination-info{
+    line-height: 30px;
+    display: inline;
+    float: left;
+    color: #666;
+}
+.pagination-box .pagination-info span{
+    color: #4390df;
+}
+.pagination-box  .wd-pagination{
+    display: inline;
+    float: right;
+    margin: 0;
+}
+
+.wd-info-p{
+    color: #666;
+    line-height: 20px;
+}
+.person-top-info{
+    padding: 15px;
+    background: #deedfb;
+    min-height: 120px;
+}
+.person-top-info .img-wrap{
+    display: inline-block;
+    width: 100px;
+    height: 120px;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    float: left;
+}
+.person-top-info .text-wrap{
+    position: relative;
+    overflow: hidden;
+}
+.person-top-info .text-wrap p{
+    line-height: 30px;
+}
+.person-top-info .text-wrap p label{
+    color: #666;
+}
+.person-more-box{
+    margin-top: 30px;
+}
+
+.table-personal-info{
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #eee;
+}
+.table-personal-info td,.table-personal-info th{
+    height: 30px;
+    line-height: 30px;
+    padding:5px 10px;
+    border: 1px solid #eee;
+}
+.table-personal-info th{
+    width: 130px;
+    text-align: right;
+    background: #f7f7f7;
+}
+.add-info-btn-box{
+    margin-top: 25px;
+}
+.table-info{
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #eee;
+}
+.table-info td,.table-info th{
+    height: 30px;
+    line-height: 30px;
+    padding:5px 10px;
+    border: 1px solid #eee;
+}
+.table-info th{
+    width: 100px;
+    text-align: right;
+    background: #f7f7f7;
+    color: #333333;
+}
+.input-style-big{
+    height: 21px;
+    line-height: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    width: 200px;
+    background: #fff;
+}
+.page-select{
+    line-height: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    width: 170px;
+    background: #fff;
+    width: 180px;
+}
+.form_table {border:1px solid #A8CFEB;border-collapse: collapse;margin-bottom:0px;}
+  .form_table th{ 
+  	padding-left:10px;
+  	padding-right:5px;
+  	padding-top:5px;
+  	padding-bottom:5px;
+  	height:33px;
+  	width: 150px;
+  	border: 1px solid silver;
+  	background-color:#F1F6FF;
+  	font-size:15px;
+  	font-weight: normal;
+  	color:#333333;
+  }
+  .form_table td{ padding-left:10px;padding-right:5px;padding-top:5px;padding-bottom:5px;height:33px;
+  border: 1px solid silver;background-color:#FAFCFF;}
+  .checkbox-label{
+  	padding-right:25px;
+  }

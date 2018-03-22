@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>分页标签</title>
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script> 
+	<link rel="stylesheet" type="text/css" href="page.css">
+	<style type="text/css">
+		a:hover, a:visited, a:link, a:active {text-decoration: none; color: black;}
+	</style>
+</head>
+<body>
+	<div class="pagination-box" style="width: 90%; margin:15px auto;">
+		<div class="pagination-info">
+			共<span id="totalPage"></span>页，共<span id="totalRows"></span>条，显示<span id="pageNumber"></span>页
+		</div>
+		<div class="wd-pagination wd-pagination-right">
+			<ul id="page_ul">
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var totalPage = 2678;  //总页数
+	var total = 26785;  //总条数
+	var pageNumber = 1;  //当前页
+	$(document).ready(function() {
+		pageDiv(totalPage,total,pageNumber);
+	});
+	function pageDiv(totalPage,total,pageNumber){
+		$('#page_ul').empty();
+		$('#totalPage').html(totalPage);
+		$('#totalRows').html(total);
+		$('#pageNumber').html(pageNumber);
+		if(pageNumber == 1){
+			$('#page_ul').append("<li class='first'><a href='javascript:turnOverPage(1)'>首页</a></li>\r\n");
+			$('#page_ul').append("<li class='prev disabled'><a href='javascript:turnOverPage(1)'>上一页</a></li>\r\n");
+		}else{
+			$('#page_ul').append("<li class='first'><a href='javascript:turnOverPage(1)'>首页</a></li>\r\n");
+			$('#page_ul').append("<li><a href='javascript:turnOverPage("+(pageNumber-1)+")'>上一页</a></li>\r\n");
+		}
+		var startPage = 1;
+		var endPage = totalPage;
+		if(totalPage <= 7){
+			for (var i = 1; i <= totalPage; i++) {
+				$('#page_ul').append("<li id='"+i+"'><a href='javascript:turnOverPage("+i+")'>"+i+"</a></li>\r\n");
+			}
+		}
+		if(totalPage > 7){
+			if(pageNumber < 4){
+				for (var i = 1; i <= 5; i++) {
+					$('#page_ul').append("<li id='"+i+"'><a href='javascript:turnOverPage("+i+")'>"+i+"</a></li>\r\n");
+				}
+				$('#page_ul').append("<li class='spaces'><a href='javascript:void(0)'>...</a></li>\r\n");
+				$('#page_ul').append("<li id='"+i+"'><a href='javascript:turnOverPage("+totalPage+")'>"+totalPage+"</a></li>\r\n");
+			}else{
+				$('#page_ul').append("<li id='1'><a href='javascript:turnOverPage(1)'>1</a></li>\r\n");
+				$('#page_ul').append("<li class='spaces'><a href='javascript:void(0)'>...</a></li>\r\n");
+				if(totalPage - pageNumber <= 1){
+					for (var i = totalPage - 2; i <= totalPage; i++) {
+						$('#page_ul').append("<li id='"+i+"'><a href='javascript:turnOverPage("+i+")'>"+i+"</a></li>\r\n");
+					}
+				}else{
+					for (var i = pageNumber - 1; i <= pageNumber + 1; i++) {
+						$('#page_ul').append("<li id='"+i+"'><a href='javascript:turnOverPage("+i+")'>"+i+"</a></li>\r\n");
+					}
+					$('#page_ul').append("<li class='spaces'><a href='javascript:void(0)'>...</a></li>\r\n");
+					$('#page_ul').append("<li id='"+totalPage+"'><a href='javascript:turnOverPage("+totalPage+")'>"+totalPage+"</a></li>\r\n");
+				}
+			}
+		}
+		if(pageNumber == totalPage){
+			$('#page_ul').append("<li class='prev disabled'><a href='javascript:turnOverPage("+totalPage+")'>下一页</a></li>\r\n");
+			$('#page_ul').append("<li class='last'><a href='javascript:turnOverPage("+totalPage+")'>尾页</a></li>\r\n");
+		}else{
+			$('#page_ul').append("<li class='next'><a href='javascript:turnOverPage("+(Number(pageNumber)+Number(1))+")'>下一页</a></li>\r\n");
+			$('#page_ul').append("<li class='last'><a href='javascript:turnOverPage("+totalPage+")'>尾页</a></li>\r\n");
+		}
+		$('#'+pageNumber).attr('class','active');
+	}
+	function turnOverPage(no){
+		if(no > totalPage){
+			no = totalPage;
+		}
+		if(no <= 0){
+			no = 1;
+		}
+		pageDiv(totalPage,total,no);
+	}
+</script>
+</html>
